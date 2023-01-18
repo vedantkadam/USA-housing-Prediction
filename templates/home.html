@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="icon" type="image/x-icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/house_1f3e0.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        h2{
+            margin-top:150px;
+            font-size:40px;
+            color: rgb(255, 255, 255);
+            font-family: 'Poppins', sans-serif;
+        }
+        h1{
+            font-size:60px;
+            color: rgb(255, 255, 255);
+            font-family: 'Poppins', sans-serif;
+        }
+        input[type=submit]{
+            background-color: greenyellow;
+            color:black;
+            cursor:pointer;
+            font-family: 'Poppins', sans-serif;
+            padding: 16px 32px;
+        }
+        body{
+            /* background-image: url("{% static 'img4.png' %}");
+           height: 300px;
+            background-repeat:no-repeat; */
+            background-color: black;
+        }
+        
+    </style>
+</head>
+<body style="text-align: center">
+<h2>Welcome to</h2>
+<h1>House Prediction System</h1>
+      <form action="predict">
+            <input type="submit" value="START">
+      </form>
+</body>
+</html>

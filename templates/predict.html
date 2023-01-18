@@ -1,0 +1,93 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Predict</title>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/house_1f3e0.png">
+
+    <style>
+        body{
+            background-image: url("{% static 'images/img2.jpg'%}");
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Poppins', sans-serif;
+
+        }
+         .main{
+            position:fixed;
+            top:120px;
+            left:410px;
+            width:700px;
+            background-color:gainsboro;
+            align-items:center;
+            border-radius:5%;
+        }
+        div{
+            padding:15px;
+        }
+        input[type=submit]{
+            background-color:Black;
+            color:white;
+            cursor:pointer;
+            padding: 16px 32px;
+        }
+        h1{
+            font-size:30px;
+        }
+        h2{
+            font-size:30px;
+            color:DarkRed;
+        }
+        body{
+            background-image: url("{% static 'img2.jpg'%}");
+            background-size:cover;
+            background-repeat:no-repeat;
+        }
+        </style>
+</head>
+<body style="text-align:center">
+<div class="main">
+        <h1>Please enter the following values:</h1>
+        <form action="result">
+        <div class="row">
+        <div class="col-sm-4" style="background-color:Bisque;">
+            <p>Avg.Area Income</p>
+            <input type="text" name="n1">
+        </div>
+        <div class="col-sm-4" style="background-color:DarkSeaGreen;">
+            <p>Avg.Area House Age</p>
+            <input type="text" name="n2">
+        </div>
+        <div class="col-sm-4" style="background-color:LightPink;">
+            <p>Avg.Area Number of rooms</p>
+            <input type="text" name="n3">
+        </div>
+        <div class="col-sm-4" style="background-color:Turquoise;">
+            <p>Avg.Area Number of bedrooms</p>
+            <input type="text" name="n4">
+        </div>
+        <div class="col-sm-4" style="background-color:RosyBrown;">
+            <p>Avg.Area Population in Area</p>
+            <input type="text" name="n5">
+        </div>
+        </div>
+        <div class="row">
+        <input type="submit" value="PREDICT">
+        </div>
+        </form>
+        <div class="row">
+        <h2>{{result2}}</h2>
+        </div>
+        </div>
+</body>
+</html>
