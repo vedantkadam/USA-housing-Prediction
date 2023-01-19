@@ -3,6 +3,7 @@
 - This is Machine Learning Project which predicts Hosing Prices in USA using Usa Hosuing Data
 - The project is implemented in 2 ways first is by training the model ie. adding entire code in views.py under a predict function (which is not practical in big projects)
 - This project consists of another branch named "model" which tests the data on a Trained Machine Learning model (finalized_model.sav)
+- [Dataset Link](https://www.kaggle.com/datasets/vedavyasv/usa-housing)
 
 
 ##  Steps to Run the Project 
