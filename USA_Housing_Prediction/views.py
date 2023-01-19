@@ -18,13 +18,7 @@ def predict(request):
 
 
 def result(request):
-    data = pd.read_csv("usa-housing.csv")
-    data = data.drop((['Address']), axis=1)
-    X = data.drop('Price', axis=1)
-    Y = data['Price']
-    X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.30)
-    model = LinearRegression()
-    model.fit(X_train, Y_train)
+    model = joblib.load('finalized_model.sav')
 
     var1 = float(request.GET['n1'])
     var2 = float(request.GET['n2'])
@@ -36,3 +30,5 @@ def result(request):
     pred=round(pred[0])
     price="The predicted price is $"+str(pred)
     return render(request,"predict.html",{"result2":price})
+    
+
